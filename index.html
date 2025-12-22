@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html data-theme="business" class="">
+<html data-theme="business" class="bg-neutral">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/style.css" rel="stylesheet" />
   </head>
-  <body>
+  <body">
     <div>
-      <header class="grid grid-cols-2">
+      <header class="flex justify-between items-center">
         <div>
-          <h1 class="w-70 p-5">
+          <h1 class="p-5 text-shadow-2xs">
             <a
-              class="inline-block text-primary text-2xl font-extrabold"
+              class="inline-block text-2xl font-extrabold text-secondary text-shadow-2xs"
               href="/"
               >Vanderson Gonçalves</a
             >
           </h1>
         </div>
-        <nav class="drawer drawer-end">
+        <nav class="drawer drawer-end w-fit">
           <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
           <div class="drawer-content flex flex-col">
-            <div class="navbar bg-base-300 w-full">
+            <div class="navbar w-full pr-5">
               <div class="flex-none lg:hidden">
                 <label
                   for="my-drawer-2"
                   aria-label="open sidebar"
-                  class="btn btn-square btn-ghost"
+                  class="btn btn-outline shadow-sm"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -56,14 +56,14 @@
             <label
               for="my-drawer-2"
               aria-label="close sidebar"
-              class="drawer-overlay"
+              class="drawer-overlay bg-neutral-950/85"
             ></label>
-            <ul class="menu bg-base-200 min-h-full w-80 p-4">
+            <ul class="menu bg-base-200 min-h-full w-80 p-4 [&>li]: [&>li]:border-b [&>li:last-child]:border-0">
               <!-- Sidebar content here -->
-              <li><a href="/">Início</a></li>
-              <li><a href="/aboutme.html">Sobre</a></li>
-              <li><a href="/projects.html">Projetos</a></li>
-              <li><a href="/contact.html">Contato</a></li>
+              <li><a class="text-lg" href="/">Início</a></li>
+              <li><a class="text-lg" href="/aboutme.html">Sobre</a></li>
+              <li><a class="text-lg" href="/projects.html">Projetos</a></li>
+              <li><a class="text-lg" href="/contact.html">Contato</a></li>
             </ul>
           </div>
         </nav>
