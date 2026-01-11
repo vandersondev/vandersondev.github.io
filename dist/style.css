@@ -9,7 +9,6 @@
       "Courier New", monospace;
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-neutral-950: oklch(14.5% 0 0);
     --color-black: #000;
@@ -17,6 +16,8 @@
     --container-5xl: 64rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
@@ -1334,6 +1335,12 @@
       }
     }
   }
+  .\!m-0 {
+    margin: calc(var(--spacing) * 0) !important;
+  }
+  .m-0 {
+    margin: calc(var(--spacing) * 0);
+  }
   .m-5 {
     margin: calc(var(--spacing) * 5);
   }
@@ -1797,6 +1804,12 @@
       margin-bottom: 0;
     }
   }
+  .mr-5 {
+    margin-right: calc(var(--spacing) * 5);
+  }
+  .ml-5 {
+    margin-left: calc(var(--spacing) * 5);
+  }
   .badge {
     @layer daisyui.l1.l2.l3 {
       display: inline-flex;
@@ -1907,6 +1920,17 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .btn-wide {
+    @layer daisyui.l1.l2 {
+      width: 100%;
+      max-width: calc(0.25rem * 64);
+    }
+  }
+  .btn-block {
+    @layer daisyui.l1.l2 {
+      width: 100%;
+    }
+  }
   .w-6 {
     width: calc(var(--spacing) * 6);
   }
@@ -1922,9 +1946,6 @@
   .w-full {
     width: 100%;
   }
-  .max-w-full {
-    max-width: 100%;
-  }
   .min-w-full {
     min-width: 100%;
   }
@@ -1935,6 +1956,9 @@
     flex-shrink: 1;
   }
   .flex-grow {
+    flex-grow: 1;
+  }
+  .grow {
     flex-grow: 1;
   }
   .border-collapse {
@@ -1983,6 +2007,9 @@
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .overflow-hidden {
     overflow: hidden;
   }
@@ -1992,10 +2019,6 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
-  }
-  .border-4 {
-    border-style: var(--tw-border-style);
-    border-width: 4px;
   }
   .border-t {
     border-top-style: var(--tw-border-style);
@@ -2007,9 +2030,6 @@
   }
   .border-gray-400 {
     border-color: var(--color-gray-400);
-  }
-  .border-gray-800 {
-    border-color: var(--color-gray-800);
   }
   .border-t-base-content {
     border-top-color: var(--color-base-content);
@@ -2025,9 +2045,6 @@
   }
   .bg-black {
     background-color: var(--color-black);
-  }
-  .bg-gray-600 {
-    background-color: var(--color-gray-600);
   }
   .bg-gray-800 {
     background-color: var(--color-gray-800);
@@ -2065,6 +2082,12 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .py-7 {
+    padding-block: calc(var(--spacing) * 7);
+  }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
@@ -2077,6 +2100,12 @@
   .pr-5 {
     padding-right: calc(var(--spacing) * 5);
   }
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
+  }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
+  }
   .text-center {
     text-align: center;
   }
@@ -2086,6 +2115,10 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -2112,6 +2145,9 @@
   }
   .text-gray-50 {
     color: var(--color-gray-50);
+  }
+  .no-underline {
+    text-decoration-line: none;
   }
   .prose {
     & :where(.btn-link):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
@@ -2168,12 +2204,41 @@
       }
     }
   }
+  .btn-xl {
+    @layer daisyui.l1.l2 {
+      --fontsize: 1.375rem;
+      --btn-p: 1.5rem;
+      --size: calc(var(--size-field, 0.25rem) * 14);
+    }
+  }
+  .btn-xs {
+    @layer daisyui.l1.l2 {
+      --fontsize: 0.6875rem;
+      --btn-p: 0.5rem;
+      --size: calc(var(--size-field, 0.25rem) * 6);
+    }
+  }
   .text-shadow-2xs {
     text-shadow: 0px 1px 0px var(--tw-text-shadow-color, rgb(0 0 0 / 0.15));
   }
   .sm\:col-span-2 {
     @media (width >= 40rem) {
       grid-column: span 2 / span 2;
+    }
+  }
+  .sm\:m-5 {
+    @media (width >= 40rem) {
+      margin: calc(var(--spacing) * 5);
+    }
+  }
+  .sm\:mr-5 {
+    @media (width >= 40rem) {
+      margin-right: calc(var(--spacing) * 5);
+    }
+  }
+  .sm\:ml-5 {
+    @media (width >= 40rem) {
+      margin-left: calc(var(--spacing) * 5);
     }
   }
   .sm\:grid {
@@ -2196,9 +2261,57 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
-  .md\:col-span-2 {
+  .sm\:content-end {
+    @media (width >= 40rem) {
+      align-content: flex-end;
+    }
+  }
+  .sm\:items-end {
+    @media (width >= 40rem) {
+      align-items: flex-end;
+    }
+  }
+  .sm\:px-0 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:py-0 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:pb-0 {
+    @media (width >= 40rem) {
+      padding-bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:btn-sm {
+    @media (width >= 40rem) {
+      @layer daisyui.l1.l2 {
+        --fontsize: 0.75rem;
+        --btn-p: 0.75rem;
+        --size: calc(var(--size-field, 0.25rem) * 8);
+      }
+    }
+  }
+  .sm\:btn-xl {
+    @media (width >= 40rem) {
+      @layer daisyui.l1.l2 {
+        --fontsize: 1.375rem;
+        --btn-p: 1.5rem;
+        --size: calc(var(--size-field, 0.25rem) * 14);
+      }
+    }
+  }
+  .md\:m-5 {
     @media (width >= 48rem) {
-      grid-column: span 2 / span 2;
+      margin: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:mr-0 {
+    @media (width >= 48rem) {
+      margin-right: calc(var(--spacing) * 0);
     }
   }
   .md\:block {
@@ -2206,24 +2319,9 @@
       display: block;
     }
   }
-  .md\:grid {
+  .md\:px-0 {
     @media (width >= 48rem) {
-      display: grid;
-    }
-  }
-  .md\:max-w-screen {
-    @media (width >= 48rem) {
-      max-width: 100vw;
-    }
-  }
-  .md\:grid-flow-col {
-    @media (width >= 48rem) {
-      grid-auto-flow: column;
-    }
-  }
-  .md\:grid-cols-3 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      padding-inline: calc(var(--spacing) * 0);
     }
   }
   .md\:px-5 {
@@ -2236,9 +2334,33 @@
       padding-top: calc(var(--spacing) * 3);
     }
   }
+  .md\:pb-0 {
+    @media (width >= 48rem) {
+      padding-bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:btn-md {
+    @media (width >= 48rem) {
+      @layer daisyui.l1.l2 {
+        --fontsize: 0.875rem;
+        --btn-p: 1rem;
+        --size: calc(var(--size-field, 0.25rem) * 10);
+      }
+    }
+  }
   .lg\:mx-auto {
     @media (width >= 64rem) {
       margin-inline: auto;
+    }
+  }
+  .lg\:mr-0 {
+    @media (width >= 64rem) {
+      margin-right: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:mr-5 {
+    @media (width >= 64rem) {
+      margin-right: calc(var(--spacing) * 5);
     }
   }
   .lg\:block {
@@ -2251,11 +2373,6 @@
       display: none;
     }
   }
-  .lg\:w-fit {
-    @media (width >= 64rem) {
-      width: fit-content;
-    }
-  }
   .lg\:w-full {
     @media (width >= 64rem) {
       width: 100%;
@@ -2264,6 +2381,29 @@
   .lg\:max-w-5xl {
     @media (width >= 64rem) {
       max-width: var(--container-5xl);
+    }
+  }
+  .lg\:btn-lg {
+    @media (width >= 64rem) {
+      @layer daisyui.l1.l2 {
+        --fontsize: 1.125rem;
+        --btn-p: 1.25rem;
+        --size: calc(var(--size-field, 0.25rem) * 12);
+      }
+    }
+  }
+  .xl\:mr-0 {
+    @media (width >= 80rem) {
+      margin-right: calc(var(--spacing) * 0);
+    }
+  }
+  .xl\:btn-xl {
+    @media (width >= 80rem) {
+      @layer daisyui.l1.l2 {
+        --fontsize: 1.375rem;
+        --btn-p: 1.5rem;
+        --size: calc(var(--size-field, 0.25rem) * 14);
+      }
     }
   }
   .\*\*\:\[a\]\:inline-block {
