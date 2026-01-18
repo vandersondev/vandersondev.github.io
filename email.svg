@@ -1,0 +1,20 @@
+<svg viewBox="0 0 33 24" xmlns="http://www.w3.org/2000/svg" style="background-color: black;">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap');
+
+
+text {
+	dominant-baseline: middle;
+	fill: #ddd;
+	font-family: Roboto;
+	font-size: 16px;
+	text-anchor: middle;
+}
+
+</style>
+<a href="mailto:vandersondev@gmail.com">
+	<text x="50%" y="50%">vandersondev@gmail.com</text>
+</a>
+
+</svg>

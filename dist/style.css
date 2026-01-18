@@ -13,6 +13,7 @@
     --color-neutral-950: oklch(14.5% 0 0);
     --color-black: #000;
     --spacing: 0.25rem;
+    --container-3xs: 16rem;
     --container-5xl: 64rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
@@ -1338,9 +1339,6 @@
   .\!m-0 {
     margin: calc(var(--spacing) * 0) !important;
   }
-  .m-0 {
-    margin: calc(var(--spacing) * 0);
-  }
   .m-5 {
     margin: calc(var(--spacing) * 5);
   }
@@ -1804,12 +1802,6 @@
       margin-bottom: 0;
     }
   }
-  .mr-5 {
-    margin-right: calc(var(--spacing) * 5);
-  }
-  .ml-5 {
-    margin-left: calc(var(--spacing) * 5);
-  }
   .badge {
     @layer daisyui.l1.l2.l3 {
       display: inline-flex;
@@ -1920,16 +1912,13 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .btn-wide {
-    @layer daisyui.l1.l2 {
-      width: 100%;
-      max-width: calc(0.25rem * 64);
-    }
-  }
   .btn-block {
     @layer daisyui.l1.l2 {
       width: 100%;
     }
+  }
+  .w-3xs {
+    width: var(--container-3xs);
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
@@ -1985,6 +1974,9 @@
   }
   .resize {
     resize: both;
+  }
+  .list-none {
+    list-style-type: none;
   }
   .flex-col {
     flex-direction: column;
@@ -2064,6 +2056,9 @@
   .stroke-current {
     stroke: currentcolor;
   }
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
+  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -2081,9 +2076,6 @@
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
-  }
-  .py-5 {
-    padding-block: calc(var(--spacing) * 5);
   }
   .py-7 {
     padding-block: calc(var(--spacing) * 7);
@@ -2103,11 +2095,11 @@
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
   }
-  .pl-5 {
-    padding-left: calc(var(--spacing) * 5);
-  }
   .text-center {
     text-align: center;
+  }
+  .text-justify {
+    text-align: justify;
   }
   .align-middle {
     vertical-align: middle;
@@ -2131,6 +2123,10 @@
   .text-sm\/14 {
     font-size: var(--text-sm);
     line-height: calc(var(--spacing) * 14);
+  }
+  .leading-7 {
+    --tw-leading: calc(var(--spacing) * 7);
+    line-height: calc(var(--spacing) * 7);
   }
   .font-extrabold {
     --tw-font-weight: var(--font-weight-extrabold);
@@ -2156,9 +2152,6 @@
   }
   .underline {
     text-decoration-line: underline;
-  }
-  .mix-blend-luminosity {
-    mix-blend-mode: luminosity;
   }
   .shadow-sm {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -2204,36 +2197,12 @@
       }
     }
   }
-  .btn-xl {
-    @layer daisyui.l1.l2 {
-      --fontsize: 1.375rem;
-      --btn-p: 1.5rem;
-      --size: calc(var(--size-field, 0.25rem) * 14);
-    }
-  }
-  .btn-xs {
-    @layer daisyui.l1.l2 {
-      --fontsize: 0.6875rem;
-      --btn-p: 0.5rem;
-      --size: calc(var(--size-field, 0.25rem) * 6);
-    }
-  }
   .text-shadow-2xs {
     text-shadow: 0px 1px 0px var(--tw-text-shadow-color, rgb(0 0 0 / 0.15));
   }
   .sm\:col-span-2 {
     @media (width >= 40rem) {
       grid-column: span 2 / span 2;
-    }
-  }
-  .sm\:m-5 {
-    @media (width >= 40rem) {
-      margin: calc(var(--spacing) * 5);
-    }
-  }
-  .sm\:mr-5 {
-    @media (width >= 40rem) {
-      margin-right: calc(var(--spacing) * 5);
     }
   }
   .sm\:ml-5 {
@@ -2261,11 +2230,6 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
-  .sm\:content-end {
-    @media (width >= 40rem) {
-      align-content: flex-end;
-    }
-  }
   .sm\:items-end {
     @media (width >= 40rem) {
       align-items: flex-end;
@@ -2286,15 +2250,6 @@
       padding-bottom: calc(var(--spacing) * 0);
     }
   }
-  .sm\:btn-sm {
-    @media (width >= 40rem) {
-      @layer daisyui.l1.l2 {
-        --fontsize: 0.75rem;
-        --btn-p: 0.75rem;
-        --size: calc(var(--size-field, 0.25rem) * 8);
-      }
-    }
-  }
   .sm\:btn-xl {
     @media (width >= 40rem) {
       @layer daisyui.l1.l2 {
@@ -2304,24 +2259,9 @@
       }
     }
   }
-  .md\:m-5 {
-    @media (width >= 48rem) {
-      margin: calc(var(--spacing) * 5);
-    }
-  }
-  .md\:mr-0 {
-    @media (width >= 48rem) {
-      margin-right: calc(var(--spacing) * 0);
-    }
-  }
   .md\:block {
     @media (width >= 48rem) {
       display: block;
-    }
-  }
-  .md\:px-0 {
-    @media (width >= 48rem) {
-      padding-inline: calc(var(--spacing) * 0);
     }
   }
   .md\:px-5 {
@@ -2329,43 +2269,14 @@
       padding-inline: calc(var(--spacing) * 5);
     }
   }
-  .md\:py-0 {
-    @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 0);
-    }
-  }
   .md\:pt-3 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 3);
     }
   }
-  .md\:pb-0 {
-    @media (width >= 48rem) {
-      padding-bottom: calc(var(--spacing) * 0);
-    }
-  }
-  .md\:btn-md {
-    @media (width >= 48rem) {
-      @layer daisyui.l1.l2 {
-        --fontsize: 0.875rem;
-        --btn-p: 1rem;
-        --size: calc(var(--size-field, 0.25rem) * 10);
-      }
-    }
-  }
   .lg\:mx-auto {
     @media (width >= 64rem) {
       margin-inline: auto;
-    }
-  }
-  .lg\:mr-0 {
-    @media (width >= 64rem) {
-      margin-right: calc(var(--spacing) * 0);
-    }
-  }
-  .lg\:mr-5 {
-    @media (width >= 64rem) {
-      margin-right: calc(var(--spacing) * 5);
     }
   }
   .lg\:block {
@@ -2386,29 +2297,6 @@
   .lg\:max-w-5xl {
     @media (width >= 64rem) {
       max-width: var(--container-5xl);
-    }
-  }
-  .lg\:btn-lg {
-    @media (width >= 64rem) {
-      @layer daisyui.l1.l2 {
-        --fontsize: 1.125rem;
-        --btn-p: 1.25rem;
-        --size: calc(var(--size-field, 0.25rem) * 12);
-      }
-    }
-  }
-  .xl\:mr-0 {
-    @media (width >= 80rem) {
-      margin-right: calc(var(--spacing) * 0);
-    }
-  }
-  .xl\:btn-xl {
-    @media (width >= 80rem) {
-      @layer daisyui.l1.l2 {
-        --fontsize: 1.375rem;
-        --btn-p: 1.5rem;
-        --size: calc(var(--size-field, 0.25rem) * 14);
-      }
     }
   }
   .\*\*\:\[a\]\:inline-block {
@@ -2489,15 +2377,47 @@
       }
     }
   }
+  .\[\&\>li\]\:mb-3 {
+    &>li {
+      margin-bottom: calc(var(--spacing) * 3);
+    }
+  }
   .\[\&\>li\>a\]\:rounded-md {
     &>li>a {
       border-radius: var(--radius-md);
+    }
+  }
+  .\[\&\>li\>a\]\:no-underline {
+    &>li>a {
+      text-decoration-line: none;
+    }
+  }
+  .\[\&\>li\>a\>svg\]\:mr-1 {
+    &>li>a>svg {
+      margin-right: calc(var(--spacing) * 1);
+    }
+  }
+  .\[\&\>li\>a\>svg\]\:mr-2 {
+    &>li>a>svg {
+      margin-right: calc(var(--spacing) * 2);
+    }
+  }
+  .\[\&\>li\>a\>svg\]\:ml-1 {
+    &>li>a>svg {
+      margin-left: calc(var(--spacing) * 1);
     }
   }
   .\[\&\>p\]\:mb-5 {
     &>p {
       margin-bottom: calc(var(--spacing) * 5);
     }
+  }
+}
+@layer base {
+  object.email {
+    height: 2em;
+    margin: -1em 0;
+    vertical-align: middle;
   }
 }
 @layer base {
@@ -2670,6 +2590,10 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -2823,6 +2747,7 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
+      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
       --tw-shadow: 0 0 #0000;
