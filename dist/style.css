@@ -1339,6 +1339,12 @@
   .\!m-0 {
     margin: calc(var(--spacing) * 0) !important;
   }
+  .m-0 {
+    margin: calc(var(--spacing) * 0);
+  }
+  .m-0\! {
+    margin: calc(var(--spacing) * 0) !important;
+  }
   .m-5 {
     margin: calc(var(--spacing) * 5);
   }
