@@ -1802,6 +1802,9 @@
       margin-bottom: 0;
     }
   }
+  .mt-0 {
+    margin-top: calc(var(--spacing) * 0);
+  }
   .badge {
     @layer daisyui.l1.l2.l3 {
       display: inline-flex;
