@@ -1903,6 +1903,10 @@
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
   }
+  .size-7 {
+    width: calc(var(--spacing) * 7);
+    height: calc(var(--spacing) * 7);
+  }
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
@@ -2380,6 +2384,11 @@
   .\[\&\>li\]\:mb-3 {
     &>li {
       margin-bottom: calc(var(--spacing) * 3);
+    }
+  }
+  .\[\&\>li\]\:mb-5 {
+    &>li {
+      margin-bottom: calc(var(--spacing) * 5);
     }
   }
   .\[\&\>li\>a\]\:rounded-md {
